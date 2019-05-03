@@ -195,3 +195,44 @@ figure {
 .about > p {
   margin: 0;
 }
+
+@media screen and (min-width:768px) {
+  .site-nav {
+    position: fixed;
+    bottom: auto;
+    right: auto;
+    width: auto;
+    height: 100%;
+    margin-top: 72px;
+  }
+  .site-nav-item {
+    float: none;
+    width: auto;
+  }
+  .site-logo {
+    top: 0;
+    left: 0;
+    width: 72px;
+    padding: 6px;
+    z-index: 101;
+    background: white;
+  }
+  .movie {
+    margin-left: 72px;
+  }
+  .movie-overview {
+    display: inline;
+  }
+  .site-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 72px;
+    background: #333333;
+  }
+  .footer-nav-item {
+    color: white;
+  }
+  .about {
+    text-align: right;
+  }
+}
