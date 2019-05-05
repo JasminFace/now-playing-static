@@ -201,9 +201,9 @@ figure {
     position: fixed;
     bottom: auto;
     right: auto;
-    width: auto;
+    width: 5em;
     height: 100%;
-    margin-top: 72px;
+    margin-top: 5em;
   }
   .site-nav-item {
     float: none;
@@ -212,13 +212,12 @@ figure {
   .site-logo {
     top: 0;
     left: 0;
-    width: 72px;
-    padding: 6px;
+    width: 5rem;
     z-index: 101;
     background: white;
   }
-  .movie {
-    margin-left: 72px;
+  main {
+    margin-left: 4.5em;
   }
   .movie-overview {
     display: inline;
@@ -226,7 +225,7 @@ figure {
   .site-footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-left: 72px;
+    margin-left: 2em;
     background: #333333;
   }
   .footer-nav-item {
@@ -234,5 +233,26 @@ figure {
   }
   .about {
     text-align: right;
+  }
+}
+@media screen and (min-width:992px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .movie {
+    margin-left: 0;
+  }
+  .movie:first-child {
+    grid-column: 1 / 4;
+  }
+  article:not(:first-child) .movie-backdrop {
+    display: none;
+  }
+  article:not(:first-child) .movie-overview {
+    display: none;
+  }
+  article:not(:first-child) .movie-poster {
+    display: block;
   }
 }
